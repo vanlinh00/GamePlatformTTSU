@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private Animator player;
     Rigidbody2D rb2d;
+    public float speed;
+    public float vjump;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -23,17 +25,27 @@ public class PlayerController : MonoBehaviour
         {
            
             player.SetBool("Run", true);
-            Move(3);
+            Move(-1);
         }
         if ((Input.GetKey(KeyCode.D)))
         {
-            
-            player.SetBool("Run", false);
+           
+            player.SetBool("Run",true);
+            Move(1);
         }
+        if(Input.GetKey(KeyCode.Space))
+        {
+            player.SetBool("Jump", true);
+            Jumb(1);
+        }    
     }
     void Move(int v)
     {
-        rb2d.velocity = new Vector2(v, rb2d.velocity.y);
-    }   
+        rb2d.velocity = new Vector2(v*speed, rb2d.velocity.y);
+    }
+    void Jumb(int J)
+    {
+        rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
+    }    
     
 }
