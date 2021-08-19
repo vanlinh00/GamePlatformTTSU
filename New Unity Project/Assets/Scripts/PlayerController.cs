@@ -9,6 +9,15 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb2d;
     public float speed;
     public float vjump;
+    int heard=3;
+    public enum PlayerState
+    {
+        idle,
+        run,
+        jumb,
+        die,
+    }
+    public PlayerState playerState;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -47,5 +56,11 @@ public class PlayerController : MonoBehaviour
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
     }    
-    
+    void Die()
+    {
+        if(playerState==PlayerState.die)
+        {
+            heard--;
+        }    
+    }    
 }
