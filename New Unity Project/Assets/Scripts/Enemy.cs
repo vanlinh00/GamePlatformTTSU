@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	protected virtual void DoUpdate()
 	{
+		DoStart();
 		move();
 	}
 

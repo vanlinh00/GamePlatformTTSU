@@ -48,7 +48,9 @@ public class PlayerController : MonoBehaviour
         {
             player.SetBool("Jump", true);
             Jumb(1);
-        }    
+        }
+
+        BulletControler.Instance.target = transform.position;
     }
     void Move(int v)
     {
