@@ -84,6 +84,7 @@ public class Enemy : MonoBehaviour
 			}
 		}
 
+
 	//	if (LimitX.Length == 2 && enemyState != EnemyState.die)
 	//	{
 	//		// Clamp gới hạn giá trị cho x 
@@ -125,5 +126,11 @@ public class Enemy : MonoBehaviour
 	//		}
 	//	}
 	}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+		Debug.LogError("da cham vao player");
+		PlayerController.Instance.subtractHeart();
+    }
+	
 
 }

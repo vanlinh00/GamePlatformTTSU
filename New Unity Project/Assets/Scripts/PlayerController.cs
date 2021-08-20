@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static PlayerController Instance;
     private Animator player;
     Rigidbody2D rb2d;
     public float speed;
     public float vjump;
-    int heard=3;
+  public  int heard = 3, coin = 0;
     public enum PlayerState
     {
         idle,
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public PlayerState playerState;
     private void Awake()
     {
+        Instance = this;
         rb2d = GetComponent<Rigidbody2D>();
     }
     void Start()
@@ -55,12 +57,22 @@ public class PlayerController : MonoBehaviour
     void Jumb(int J)
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
-    }    
+    }  
+    void AddCoin(int coin)
+    {
+
+    }
     void Die()
     {
         if(playerState==PlayerState.die)
         {
-            heard--;
+          /// do somthing
         }    
-    }    
+    }
+   public void subtractHeart()
+    {
+        heard--;
+        UiController.Instance.Hheart(heard);
+    }
+   
 }
