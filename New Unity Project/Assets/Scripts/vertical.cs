@@ -7,6 +7,7 @@ public class vertical : MonoBehaviour
     // Start is called before the first frame update
     public float Movespeed;
     public float[] LimitY;
+   
     void Start()
     {
         
@@ -16,6 +17,7 @@ public class vertical : MonoBehaviour
     void Update()
     {
         Move();
+       
     }
     void Move()
     {
@@ -31,5 +33,6 @@ public class vertical : MonoBehaviour
                 Movespeed = -Movespeed;
             }    
         }
-    }    
+    }
+   
 }

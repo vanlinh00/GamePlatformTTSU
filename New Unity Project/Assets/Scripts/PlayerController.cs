@@ -6,11 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public static PlayerController Instance;
-    private Animator player;
+    private Animator Aniplayer;
     Rigidbody2D rb2d;
     public float speed;
-    public float vjump;
-  public  int heard = 3, coin = 0;
+    public float jump;
+    public  int heard = 3, coin = 0;
+    bool isGround;
     public enum PlayerState
     {
         idle,
@@ -21,53 +22,90 @@ public class PlayerController : MonoBehaviour
     public PlayerState playerState;
     private void Awake()
     {
+        isGround = false;
         Instance = this;
         rb2d = GetComponent<Rigidbody2D>();
     }
     void Start()
     {
-        player = GetComponent<Animator>();
+        Aniplayer = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       if((Input.GetKey(KeyCode.A)))
+        //if((Input.GetKey(KeyCode.A)))
+        // {
+
+        //     player.SetBool("Run", true);
+        //     Move(-1);
+        // }
+        // if ((Input.GetKey(KeyCode.D)))
+        // {
+
+        //     player.SetBool("Run",true);
+        //     Move(1);
+        // }
+        // if(Input.GetKey(KeyCode.Space)&&isGround==true)
+        // {
+        //     Debug.LogError("isGround"+isGround);
+        //     player.SetBool("Jump", true);
+        //     Jumb(1);
+        //     isGround = false;
+        // }
+        // else
+        // {
+        //     player.SetBool("Idle", true);
+        // }
+
+
+
+        //  BulletControler.Instance.target = transform.position;
+
+        var movement = Input.GetAxis("Horizontal");
+        MovePlayer(movement);
+
+        //if(!Mathf.Approximately(0,movemnet))
+        //{
+        //    transform.rotation = movemnet > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        //}    
+
+        if(Input.GetButtonDown("Jump")&&Mathf.Abs(rb2d.velocity.y)<0.001f)
         {
-           
-            player.SetBool("Run", true);
-            Move(-1);
-        }
-        if ((Input.GetKey(KeyCode.D)))
+            rb2d.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+        }     
+     }
+
+      void MovePlayer(float movement)
+    {
+        if(movement<0)
         {
-           
-            player.SetBool("Run",true);
-            Move(1);
-        }
-        if(Input.GetKey(KeyCode.Space))
-        {
-            player.SetBool("Jump", true);
-            Jumb(1);
-        }
-        else
-        {
-            player.SetBool("idle", true);
+            Aniplayer.SetBool("Run", true);
         }
 
-        BulletControler.Instance.target = transform.position;
-    }
-    void Move(int v)
-    {
-        rb2d.velocity = new Vector2(v*speed, rb2d.velocity.y);
-    }
-    void Jumb(int J)
-    {
-        rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
-    }  
-    void AddCoin(int coin)
-    {
+        if (movement > 0)
+        {
+            Aniplayer.SetBool("Run", true);
+        }
+        if (movement > 0)
+        {
+            Aniplayer.SetBool("Run", false);
+        }
+        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
-    }
+    }    
+    //void Move(int v)
+    //{
+    //    rb2d.velocity = new Vector2(v*speed*Time.deltaTime, rb2d.velocity.y);
+    //}
+    //void Jumb(int J)
+    //{
+    //    rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
+    //}  
+    //void AddCoin(int coin)
+    //{
+
+    //}
     void Die()
     {
         if(playerState==PlayerState.die)
@@ -80,5 +118,16 @@ public class PlayerController : MonoBehaviour
         heard--;
         UiController.Instance.Hheart(heard);
     }
-   
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+       
+        if(collision.gameObject.tag.Equals("Ground"))
+        {
+            isGround = true;
+
+        }
+      
+    }
+  
+
 }

@@ -7,6 +7,8 @@ public class horizontal : MonoBehaviour
     // Start is called before the first frame update
     public float speed= 0.3f;
     public float[] LimitX;
+    public GameObject Player;
+    bool isMovePlatfrom = false;
     void Start()
     {
         
@@ -16,6 +18,10 @@ public class horizontal : MonoBehaviour
     void Update()
     {
         Move();
+        if (isMovePlatfrom)
+        {
+            Player.transform.SetParent(this.transform);
+        }
     }
     void Move()
     {
@@ -31,5 +37,12 @@ public class horizontal : MonoBehaviour
                 speed = -speed;
             }
         }
-    }    
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            isMovePlatfrom = true;
+        }
+    }
 }
