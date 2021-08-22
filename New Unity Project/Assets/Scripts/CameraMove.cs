@@ -36,7 +36,7 @@ public class CameraMove : MonoBehaviour
     void LateUpdate()
     {
         newtrans.x = player.transform.position.x + offset.x;
-        newtrans.y = player.transform.position.y + offset.y;
+        newtrans.y = player.transform.position.y + offset.y+ 2.445716f;
         transform.position = newtrans;
     }
 }

@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
             player.SetBool("Jump", true);
             Jumb(1);
         }
+        else
+        {
+            player.SetBool("idle", true);
+        }
 
         BulletControler.Instance.target = transform.position;
     }
