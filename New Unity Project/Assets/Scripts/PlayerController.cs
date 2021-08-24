@@ -65,12 +65,12 @@ public class PlayerController : MonoBehaviour
         var movement = Input.GetAxis("Horizontal");
         MovePlayer(movement);
 
-
-        if (Input.GetButtonDown("Jump")&&Mathf.Abs(rb2d.velocity.y)<0.001f)
+        if(Input.GetButtonDown("Jump"))
         {
-            Aniplayer.SetBool("Jump", true);
-            rb2d.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
-        }     
+            Fjump(jump);
+        }    
+
+
      }
 
       void MovePlayer(float movement)
@@ -98,20 +98,29 @@ public class PlayerController : MonoBehaviour
 
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
+    } 
+    public void Fjump(float jump1)
+    {
+        if (Mathf.Abs(rb2d.velocity.y) < 0.001f)
+        {
+            Aniplayer.SetBool("Jump", true);
+            rb2d.AddForce(new Vector2(0, jump1), ForceMode2D.Impulse);
+        }
     }    
-    //void Move(int v)
-    //{
-    //    rb2d.velocity = new Vector2(v*speed*Time.deltaTime, rb2d.velocity.y);
-    //}
-    //void Jumb(int J)
-    //{
-    //    rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
-    //}  
-    //void AddCoin(int coin)
-    //{
+     
+//void Move(int v)
+//{
+//    rb2d.velocity = new Vector2(v*speed*Time.deltaTime, rb2d.velocity.y);
+//}
+//void Jumb(int J)
+//{
+//    rb2d.velocity = new Vector2(rb2d.velocity.x, J * vjump );
+//}  
+//void AddCoin(int coin)
+//{
 
-    //}
-    void Die()
+//}
+void Die()
     {
         if(playerState==PlayerState.die)
         {
@@ -129,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag.Equals("Ground"))
         {
             isGround = true;
+           transform.SetParent(null);
 
         }
       
