@@ -65,32 +65,37 @@ public class PlayerController : MonoBehaviour
         var movement = Input.GetAxis("Horizontal");
         MovePlayer(movement);
 
-        //if(!Mathf.Approximately(0,movemnet))
-        //{
-        //    transform.rotation = movemnet > 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
-        //}    
 
-        if(Input.GetButtonDown("Jump")&&Mathf.Abs(rb2d.velocity.y)<0.001f)
+        if (Input.GetButtonDown("Jump")&&Mathf.Abs(rb2d.velocity.y)<0.001f)
         {
+            Aniplayer.SetBool("Jump", true);
             rb2d.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
         }     
      }
 
       void MovePlayer(float movement)
     {
-        if(movement<0)
+
+        if (!Mathf.Approximately(0, movement))
+        {
+            transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        }
+        if (movement<0)
         {
             Aniplayer.SetBool("Run", true);
+            
         }
 
         if (movement > 0)
         {
             Aniplayer.SetBool("Run", true);
         }
-        if (movement > 0)
+        if (movement == 0)
         {
             Aniplayer.SetBool("Run", false);
+            Aniplayer.SetBool("Jump", false);
         }
+
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
     }    
