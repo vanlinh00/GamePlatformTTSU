@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ground
   - platform1
+  - crab
+  - daibang
+  - bullet
+  - enemy
+  - coin
   layers:
   - Default
   - TransparentFX

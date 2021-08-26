@@ -6,7 +6,6 @@ using UnityEngine.UI;
 /// </summary>
 public class UiController : MonoBehaviour
 {
-    // Start is called before the first frame update
     /// <summary>
     /// Defines the Instance.
     /// </summary>
@@ -16,7 +15,7 @@ public class UiController : MonoBehaviour
     /// Defines the heart.
     /// </summary>
     public Text heart;
-
+   
     /// <summary>
     /// The Start.
     /// </summary>
@@ -32,7 +31,6 @@ public class UiController : MonoBehaviour
         Instance = this;
     }
 
-    // Update is called once per frame
     /// <summary>
     /// The Update.
     /// </summary>
@@ -43,9 +41,17 @@ public class UiController : MonoBehaviour
     /// <summary>
     /// The Hheart.
     /// </summary>
-    /// <param name="heart">The heart<see cref="int"/>.</param>
+    /// <param name="heart1">The heart1<see cref="int"/>.</param>
     public void Hheart(int heart1)
     {
         heart.text = heart1 + "";
     }
+    public void ClickPlay()
+    {
+        GameController.Instance.NextSence();
+    }
+    public void ClickJump()
+    {
+        PlayerController.Instance.isjump=true;
+    }    
 }

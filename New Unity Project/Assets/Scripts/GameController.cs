@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public static GameController Instance;
     void Start()
     {
-
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -16,4 +16,8 @@ public class GameController : MonoBehaviour
     {
 
     }
+  public  void NextSence()
+    {
+        SceneManager.LoadScene(1);
+    }    
 }

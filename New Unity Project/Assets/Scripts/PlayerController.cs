@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     public float jump;
     public  int heard = 3, coin = 0;
     bool isGround;
+    public Joystick joystick;
+    float movement;
+    public bool isjump;
+    public GameObject Bullet;
+    public Transform firepoint;
     public enum PlayerState
     {
         idle,
@@ -61,17 +66,23 @@ public class PlayerController : MonoBehaviour
 
 
         //  BulletControler.Instance.target = transform.position;
+#if UNITY_ANDROID || UNITY_IOS
 
-        var movement = Input.GetAxis("Horizontal");
-        MovePlayer(movement);
-
+        movement = joystick.Horizontal;
+#else
+ 
+    movement = Input.GetAxis("Horizontal");
+    
         if(Input.GetButtonDown("Jump"))
         {
             Fjump(jump);
         }    
+#endif
+        MovePlayer(movement);
+        if(isjump)
+        Fjump(jump);
 
-
-     }
+    }
 
       void MovePlayer(float movement)
     {
@@ -95,7 +106,6 @@ public class PlayerController : MonoBehaviour
             Aniplayer.SetBool("Run", false);
             Aniplayer.SetBool("Jump", false);
         }
-
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
 
     } 
@@ -106,7 +116,13 @@ public class PlayerController : MonoBehaviour
             Aniplayer.SetBool("Jump", true);
             rb2d.AddForce(new Vector2(0, jump1), ForceMode2D.Impulse);
         }
-    }    
+        isjump = false;
+    } 
+    public void Shoot()
+    {
+        GameObject bullet1 = Instantiate(Bullet,firepoint.position, Quaternion.identity) as GameObject;
+
+    }
      
 //void Move(int v)
 //{
