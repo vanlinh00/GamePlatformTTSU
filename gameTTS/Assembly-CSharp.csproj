@@ -78,11 +78,13 @@
     <Compile Include="Assets\Scripts\E1Controller.cs" />
     <Compile Include="Assets\Scripts\E2Controller.cs" />
     <Compile Include="Assets\Scripts\E3Beecontroller.cs" />
+    <Compile Include="Assets\Scripts\E4hedgehogController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\horizontal.cs" />
     <Compile Include="Assets\Scripts\Item1Controller.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\TruController.cs" />
     <Compile Include="Assets\Scripts\UiController.cs" />
     <Compile Include="Assets\Scripts\vertical.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

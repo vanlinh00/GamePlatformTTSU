@@ -152,7 +152,7 @@ void Die()
        
         if(collision.gameObject.tag.Equals("Ground"))
         {
-            isGround = true;
+           isGround = true;
            transform.SetParent(null);
         }
         if(collision.gameObject.tag.Equals("waterAnimation"))

@@ -28,7 +28,7 @@ public class E2Controller : Enemy
         }
      
         float distance = Vector3.Distance(player.transform.position,transform.position);
-        if (distance <= 4&&Time.time>=timedau+4f)
+        if (distance <= 4&&Time.time>=timedau+3f)
         {
             a = 3;
             GameObject boomdie = Instantiate(boom, transform.position, Quaternion.identity) as GameObject;

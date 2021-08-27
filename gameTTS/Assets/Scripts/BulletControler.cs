@@ -23,4 +23,10 @@ public class BulletControler : MonoBehaviour
 
         transform.Translate((transform.position - target.position) * MoveSpeed * Time.deltaTime * -1);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+        Destroy(collision.gameObject);
+        GameController.Instance.LoadSenceAgain();
+    }
 }
