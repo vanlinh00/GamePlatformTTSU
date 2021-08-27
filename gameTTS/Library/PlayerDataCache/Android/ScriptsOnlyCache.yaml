@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - CameraMove
     - E1Controller
     - E2Controller
+    - E3Beecontroller
     - FixedJoystick
     - GameController
     - Item1Controller
@@ -115,6 +116,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11534}
     - Class: 114
       Script: {instanceID: 11586}
+    - Class: 114
+      Script: {instanceID: 33886}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -473,7 +476,7 @@ ScriptsOnlyBuild:
     className: vertical
   - hash:
       serializedVersion: 2
-      Hash: 96b849ae3542428b3fb8067e9243b14d
+      Hash: 31a708090b94b0649044cb0ebd25b912
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BulletControler
@@ -747,8 +750,14 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
+  - hash:
+      serializedVersion: 2
+      Hash: 9fb28d18431baa2b6d7b88d5c3f506d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: E3Beecontroller
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Level_1.unity
-  playerPath: C:/Users/canha/Desktop/apkgametts/run3.apk
+  playerPath: C:/Users/canha/Desktop/apkgametts/run4.apk

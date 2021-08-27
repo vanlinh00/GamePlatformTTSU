@@ -6,18 +6,21 @@ public class BulletControler : MonoBehaviour
 {
     // Start is called before the first frame update
     public static BulletControler Instance;
-    public Vector3 target;
+    public Transform target;
     public float MoveSpeed;
     void Start()
     {
         Instance = this;
+ 
+         target=   PlayerController.Instance.gettranformplayer();
+        
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate((transform.position - target) * MoveSpeed * Time.deltaTime*-1);
-        
+
+        transform.Translate((transform.position - target.position) * MoveSpeed * Time.deltaTime * -1);
     }
 }

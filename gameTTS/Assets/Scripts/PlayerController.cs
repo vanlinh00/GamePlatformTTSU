@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //  BulletControler.Instance.target = transform.position;
 #if UNITY_ANDROID || UNITY_IOS
 
         movement = joystick.Horizontal;
@@ -162,6 +161,9 @@ void Die()
         }    
       
     }
-  
+    public Transform gettranformplayer()
+    {
+        return gameObject.transform;
+    }    
 
 }
