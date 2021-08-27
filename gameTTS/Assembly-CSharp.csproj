@@ -71,6 +71,7 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Scripts\BossController.cs" />
     <Compile Include="Assets\Scripts\BulletControler.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
@@ -81,8 +82,10 @@
     <Compile Include="Assets\Scripts\E4hedgehogController.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\girlController.cs" />
     <Compile Include="Assets\Scripts\horizontal.cs" />
     <Compile Include="Assets\Scripts\Item1Controller.cs" />
+    <Compile Include="Assets\Scripts\MovePlayerControler.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TruController.cs" />
     <Compile Include="Assets\Scripts\UiController.cs" />

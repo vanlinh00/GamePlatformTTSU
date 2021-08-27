@@ -22,6 +22,18 @@ public class E3Beecontroller : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // 3 bee touch => player die
         Debug.LogError("ban da cham vao bee");
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("bullet"))
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            GameController.Instance.LoadSenceAgain();
+        }
     }
 }
