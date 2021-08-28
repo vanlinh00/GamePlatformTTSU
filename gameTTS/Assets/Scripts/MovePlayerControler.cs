@@ -16,10 +16,10 @@ public class MovePlayerControler : MonoBehaviour
     {
         target = PlayerController.Instance.gettranformplayer();
         float distance = Vector3.Distance(transform.position, target.position);
-        if (distance <= 8)
+        if (distance <= 11)
         {
             AnimatorObject.SetBool("run", true);
-            transform.Translate((transform.position - target.position) * 2f * Time.deltaTime * -1);
+            transform.Translate((transform.position - target.position) * 0.5f * Time.deltaTime * -1);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

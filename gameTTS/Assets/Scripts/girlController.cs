@@ -20,7 +20,7 @@ public class girlController :MovePlayerControler
        
         if (collision.gameObject.tag.Equals("Player"))
         {
-           
+            UiController.Instance.EndGame();
         }
     }
 }

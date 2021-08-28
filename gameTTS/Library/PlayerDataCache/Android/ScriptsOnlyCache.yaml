@@ -32,6 +32,7 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
@@ -83,55 +84,55 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 576}
+      Script: {instanceID: 578}
     - Class: 114
-      Script: {instanceID: 9676}
+      Script: {instanceID: 9678}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9840}
+      Script: {instanceID: 9842}
     - Class: 114
-      Script: {instanceID: 9880}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 9922}
+      Script: {instanceID: 9924}
     - Class: 114
-      Script: {instanceID: 9930}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 10022}
+      Script: {instanceID: 10024}
     - Class: 114
-      Script: {instanceID: 10240}
+      Script: {instanceID: 10242}
     - Class: 114
-      Script: {instanceID: 10258}
+      Script: {instanceID: 10260}
     - Class: 114
-      Script: {instanceID: 10296}
+      Script: {instanceID: 10298}
     - Class: 114
-      Script: {instanceID: 10310}
+      Script: {instanceID: 10312}
     - Class: 114
-      Script: {instanceID: 10380}
+      Script: {instanceID: 10382}
     - Class: 114
-      Script: {instanceID: 10422}
+      Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 10446}
-    - Class: 114
-      Script: {instanceID: 10482}
+      Script: {instanceID: 10448}
     - Class: 114
       Script: {instanceID: 10484}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10684}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 10978}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11066}
     - Class: 114
-      Script: {instanceID: 11316}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 11548}
+    - Class: 114
+      Script: {instanceID: 11600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -188,31 +189,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 576}
+      Script: {instanceID: 578}
     - Class: 114
-      Script: {instanceID: 9676}
+      Script: {instanceID: 9678}
     - Class: 114
-      Script: {instanceID: 9840}
+      Script: {instanceID: 9842}
     - Class: 114
-      Script: {instanceID: 9880}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 9922}
+      Script: {instanceID: 9924}
     - Class: 114
-      Script: {instanceID: 9930}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 9998}
+      Script: {instanceID: 10000}
     - Class: 114
-      Script: {instanceID: 10296}
+      Script: {instanceID: 10298}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10448}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10684}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11546}
+      Script: {instanceID: 11548}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -498,7 +499,7 @@ ScriptsOnlyBuild:
     className: horizontal
   - hash:
       serializedVersion: 2
-      Hash: b00c4fe9823a9023346d6400dea62272
+      Hash: bdce2fd283eab2dd8461961801e83c40
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UiController
@@ -812,4 +813,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Level_1.unity
-  playerPath: C:/Users/canha/Desktop/apkgametts/run8.apk
+  playerPath: C:/Users/canha/Desktop/apkgametts/run9.apk

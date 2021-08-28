@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossController :MovePlayerControler
 {
     // Start is called before the first frame update
+    int heart = 5;
     void Start()
     {
         
@@ -18,6 +19,16 @@ public class BossController :MovePlayerControler
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        //     Destroy(gameObject);
+
+        if (collision.gameObject.tag.Equals("bullet"))
+        {
+            heart--;
+            if(heart==0)
+            {
+                Destroy(gameObject);
+            }    
+        }
     }
+ 
 }

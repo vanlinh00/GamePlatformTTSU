@@ -9,9 +9,10 @@ public class UiController : MonoBehaviour
 
     public GameObject[] Heart;
     // end Game
+    public GameObject UiEndGame;
     public GameObject TextEndGame;
     public GameObject ImageAnime;
-
+    public Animator startgame;
     internal void Start()
     {
     }
@@ -50,8 +51,16 @@ public class UiController : MonoBehaviour
             }    
         }    
     }
-    //public EndGame()
-    //{
-
-    //}    
+    public void EndGame()
+    {
+        UiEndGame.SetActive(true);
+    }
+    public void StartGame()
+    {
+        TextEndGame.SetActive(false);
+        ImageAnime.SetActive(false);
+        startgame.SetBool("run", true);
+        UiEndGame.SetActive(false);
+        GameController.Instance.LoadSenceAgain();
+    }
 }

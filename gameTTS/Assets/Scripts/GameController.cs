@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     {
 
     }
-  public  void NextSence()
+  public void NextSence()
     {
         SceneManager.LoadScene(1);
     } 
