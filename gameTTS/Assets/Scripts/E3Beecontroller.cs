@@ -33,7 +33,7 @@ public class E3Beecontroller : MonoBehaviour
         }
         if (collision.gameObject.tag.Equals("Player"))
         {
-            GameController.Instance.LoadSenceAgain();
+            PlayerController.Instance.subtractHeart();
         }
     }
 }

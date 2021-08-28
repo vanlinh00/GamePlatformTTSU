@@ -19,7 +19,18 @@ public class MovePlayerControler : MonoBehaviour
         if (distance <= 8)
         {
             AnimatorObject.SetBool("run", true);
-            transform.Translate((transform.position - target.position) * 5f * Time.deltaTime * -1);
+            transform.Translate((transform.position - target.position) * 2f * Time.deltaTime * -1);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("bullet"))
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            PlayerController.Instance.subtractHeart();
         }
     }
 }

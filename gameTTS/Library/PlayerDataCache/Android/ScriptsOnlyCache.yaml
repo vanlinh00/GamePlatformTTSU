@@ -99,39 +99,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10292}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10306}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10418}
+      Script: {instanceID: 10310}
     - Class: 114
-      Script: {instanceID: 10442}
+      Script: {instanceID: 10380}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10422}
     - Class: 114
-      Script: {instanceID: 10480}
+      Script: {instanceID: 10446}
     - Class: 114
-      Script: {instanceID: 10590}
+      Script: {instanceID: 10482}
     - Class: 114
-      Script: {instanceID: 10680}
+      Script: {instanceID: 10484}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 10978}
     - Class: 114
-      Script: {instanceID: 11310}
+      Script: {instanceID: 11064}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 119294}
+      Script: {instanceID: 11546}
     - Class: 114
-      Script: {instanceID: 124092}
+      Script: {instanceID: 11598}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -192,6 +192,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9676}
     - Class: 114
+      Script: {instanceID: 9840}
+    - Class: 114
       Script: {instanceID: 9880}
     - Class: 114
       Script: {instanceID: 9922}
@@ -200,18 +202,20 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9998}
     - Class: 114
-      Script: {instanceID: 10292}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10442}
+      Script: {instanceID: 10446}
     - Class: 114
-      Script: {instanceID: 10480}
+      Script: {instanceID: 10484}
     - Class: 114
-      Script: {instanceID: 10680}
+      Script: {instanceID: 10684}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11546}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -434,6 +438,18 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 58b00a2257d1dd29cbd479fbec82c8ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossController
+  - hash:
+      serializedVersion: 2
+      Hash: 58b00a2257d1dd29cbd479fbec82c8ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: girlController
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -482,7 +498,7 @@ ScriptsOnlyBuild:
     className: horizontal
   - hash:
       serializedVersion: 2
-      Hash: 4f0a7dd27756de8e9ec3d5a322c3290c
+      Hash: b00c4fe9823a9023346d6400dea62272
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UiController
@@ -624,6 +640,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 58b00a2257d1dd29cbd479fbec82c8ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovePlayerControler
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -786,26 +808,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
-  - hash:
-      serializedVersion: 2
-      Hash: 58b00a2257d1dd29cbd479fbec82c8ca
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: girlController
-  - hash:
-      serializedVersion: 2
-      Hash: 58b00a2257d1dd29cbd479fbec82c8ca
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BossController
-  - hash:
-      serializedVersion: 2
-      Hash: 58b00a2257d1dd29cbd479fbec82c8ca
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MovePlayerControler
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Level_1.unity
-  playerPath: C:/Users/canha/Desktop/apkgametts/run6.apk
+  playerPath: C:/Users/canha/Desktop/apkgametts/run8.apk

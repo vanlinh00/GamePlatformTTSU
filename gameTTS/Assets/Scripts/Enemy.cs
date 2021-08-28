@@ -130,7 +130,11 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 		Debug.LogError("da cham vao player");
-		PlayerController.Instance.subtractHeart();
+		if (collision.gameObject.tag.Equals("Player"))
+		{
+			PlayerController.Instance.subtractHeart();
+			
+		}
     }
 	private void OnTriggerEnter2D(Collider2D collision)
 	{

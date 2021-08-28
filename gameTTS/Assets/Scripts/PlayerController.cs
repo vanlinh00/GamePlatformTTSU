@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb2d;
     public float speed;
     public float jump;
-    public  int heard = 3, coin = 0;
+    public  int heard = 2, coin = 0;
     bool isGround;
     public Joystick joystick;
     float movement;
@@ -145,8 +145,14 @@ void Die()
    public void subtractHeart()
     {
         heard--;
+        if(heard<=-1)
+        {
+            GameController.Instance.LoadSenceAgain();
+        }    
         UiController.Instance.Hheart(heard);
+        UiController.Instance.subHeart(heard);
     }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
        
