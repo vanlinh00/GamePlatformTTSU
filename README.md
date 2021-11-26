@@ -1,3 +1,2 @@
 # GamePlatformTTSU
-step1: download my soure code 
-step2: use unity engine open soure code 
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
